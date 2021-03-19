@@ -127,7 +127,7 @@ function App() {
       setCellStates(nextStates);
       console.table(nextStates);
       console.table(cellStates);
-    }, 100);
+    }, 500);
     return () => clearInterval(interval);
   });
   return (
@@ -144,7 +144,6 @@ function App() {
         </header>
         <div className="board">
           {cellStates.map((cells, i) => cells.map((cell, j) => {
-            let livingNeighborCount = 0;
             if(cell){
               return <div className="cell alive"></div>
             } else {
